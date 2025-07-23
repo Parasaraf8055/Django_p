@@ -1,0 +1,70 @@
+/* static/css/update_blogs.css */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #eef2f7;
+    margin: 0;
+    padding: 20px;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #444;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="time"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.cancel-btn {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #f44336;
+    font-weight: bold;
+}

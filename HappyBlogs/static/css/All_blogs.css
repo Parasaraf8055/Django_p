@@ -1,0 +1,102 @@
+/* static/css/all_blogs.css */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.add-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.add-btn:hover {
+    background: #45a049;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.blog-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.blog-header h2 {
+    margin: 0;
+    color: #222;
+}
+
+.datetime {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.content {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #444;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.username{
+    display: flex;
+    color: grey;
+
+}
+
+
+.edit-btn, .delete-btn {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #2196F3;
+}
+
+.edit-btn:hover {
+    background-color: #1e87dc;
+}
+
+.delete-btn {
+    background-color: #f44336;
+}
+
+.delete-btn:hover {
+    background-color: #e53935;
+}
+
+.footer{
+    color: red;
+}
