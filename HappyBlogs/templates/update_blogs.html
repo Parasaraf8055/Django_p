@@ -1,0 +1,33 @@
+<!-- templates/update_blogs.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% if blog %}Update{% else %}Create{% endif %} Blog - HappyBlogs</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/update_blogs.css' %}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>{% if blog %}Update{% else %}Create{% endif %} Your Blog</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="name">Enter Your name:</label>
+            <input type="text" id="name" name="name" value="{{ blog.name| default_if_none:""}}" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" value="{{ blog.date|date:'Y-m-d' }}" required>
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" value="{{ blog.time|time:'H:i' }}" required>
+
+            <label for="content">Content:</label>
+            <textarea id="content" name="content" rows="6" required>{{ blog.content|default_if_none:'' }}</textarea>
+
+
+            <button type="submit" class="submit-btn">{% if blog %}Update{% else %}Post{% endif %}</button>
+            <a href="{% url 'All_blogs' %}" class="cancel-btn">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>

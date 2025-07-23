@@ -1,0 +1,32 @@
+<!-- templates/All_blogs.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Blogs - HappyBlogs</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/All_blogs.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>HappyBlogs 📝</h1>
+        <a href="{% url 'create_blog' %}" class="add-btn">➕ Create New Blog</a>
+        
+        {% for blog in blogs %}
+        <div class="blog-card">
+            <div class="blog-header">
+                <h2>{{ blog.name }}</h2>
+                <span class="datetime">{{ blog.date }} | {{ blog.time }}</span>
+            </div>
+            <p class="content">{{ blog.content }}</p>
+            <div class="actions">
+                <a href="{% url 'update_blog' blog.id %}" class="edit-btn">Edit ✏️</a>
+                <a href="{% url 'delete_blog' blog.id %}" class="delete-btn" onclick="return confirm('Are you sure?')">Delete ❌</a>
+            </div>
+        </div>
+        {% empty %}
+            <p class="footer">No blogs posted yet. Be the first to write something inspiring!</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
